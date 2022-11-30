@@ -1,0 +1,22 @@
+:root {
+    --base-font: 'Roboto', sans-serif;
+    --base-font-color: #0A0A0A;
+    --base-bg-color: #FBF7EB;
+    --base-font-size: 18px;
+    --base-transition: all 0.3s linear;
+    --base-line-hight: 1.5em;
+
+    --button-font-color: #ffffff;
+    --button-blue-bg-color: #2655AD;
+    --button-orange-bg-color: #CA6A30;
+    --button-hover-bg-color: #0A0A0A;
+
+    --header-border-color: #D5D3C6;
+    --menu-hover-color: invert(38%) sepia(95%) saturate(429%) hue-rotate(334deg) brightness(105%) contrast(85%);
+    --nav-link-hover-color: #D06838;
+    --logo-font: 'Wallpoet', cursive;
+
+    --gradient-bg: linear-gradient(146deg, rgba(254,253,250,1) 0%, rgba(51,128,133,1) 100%);
+    --gradient-bg-just-color: rgb(254,253,250);
+    --main-box-bg: #ffffff;
+}

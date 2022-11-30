@@ -1,0 +1,242 @@
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--base-bg-color);
+    color: var(--base-font-color);
+    font-family: var(--base-font);
+    font-size: var(--base-font-size);
+    line-height: var(--base-line-hight);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+div, ul, li, p {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    font-weight: normal;
+    transition: var(--base-transition);
+    cursor: pointer;
+}
+
+img {
+    border: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+h2 {
+    color: var(--base-font-color);
+    margin: 0 0 25px 0;
+    padding: 0;
+    font-family: var(--base-font);
+    font-weight: bold;
+    font-style: normal;
+    text-align: left;
+    font-size: 1.9rem;
+}
+
+p {
+    padding: 0;
+    margin: 8px 0;
+    text-align: left;
+}
+
+button {
+    word-wrap: break-word;
+    white-space: normal;
+    font-size: 1rem;
+    font-family: var(--base-font);
+    font-weight: bold;
+    font-style: normal;
+    padding: 10px 20px;
+    margin: 15px 0;
+    cursor: pointer;
+    color: var(--button-font-color);
+    transition: var(--base-transition);
+    border: none;
+    border-radius: 2px;
+}
+.button-blue {
+    background: var(--button-blue-bg-color);
+}
+.button-orange {
+    background: var(--button-orange-bg-color);
+}
+.button-blue:hover,
+.button-blue:focus,
+.button-orange:hover,
+.button-orange:focus {
+    background: var(--button-hover-bg-color);
+}
+
+
+#headercontainer {
+    border-bottom: 1px solid var(--header-border-color);
+}
+
+header {
+    width: 90%;
+    max-width: 1600px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    align-items: center;
+}
+header a {
+    color: var(--base-font-color);
+}
+header a:hover,
+header a:focus {
+    color: var(--nav-link-hover-color)
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+#mobilmenu {
+    font-size: 0;
+    line-height: 0;
+}
+#mobilmenu img {
+    width: 1.5rem;
+}
+#mobilmenu:hover img,
+#mobilmenu:focus img {
+    filter: var(--menu-hover-color)
+}
+
+#logo {
+    font-family: var(--logo-font);
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#header-aboutme {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    align-items: center;
+}
+#header-aboutme > *:first-child {
+    margin-right: 50px;
+}
+#header-aboutme img {
+    width: 4rem;
+    border-radius: 50rem;
+}
+
+
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    width: 90%;
+    max-width: 1600px;
+    margin: 50px auto;
+}
+main > * {
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 16px 14px 13px -2px rgba(0,0,0,0.1);
+}
+
+#email-marketing {
+    grid-row: 1/3;
+    background: var(--gradient-bg-just-color);
+    background: var(--gradient-bg);
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#email-marketing img {
+    margin-top: auto;
+    padding-top: 20px;
+}
+#data-storage {
+    grid-column: 2/4;
+    background: var(--gradient-bg-just-color);
+    background: var(--gradient-bg);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+#data-storage > *:first-child {
+    padding-top: 25px;
+}
+#data-storage img {
+    width: 70%;
+}
+#user-interface,
+#design {
+    background: var(--main-box-bg);
+}
+
+
+
+@media screen and (max-width: 1200px) {
+
+    header {
+        grid-template-columns: 1fr 1fr;
+    }
+    #logo {
+        grid-row: 1/2;
+        grid-column: 1/3;
+    }
+
+    main {
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr 1fr;
+    }
+    #email-marketing {
+        grid-row: 1/2;
+    }
+    #data-storage {
+        grid-column: 2/3;
+        grid-template-columns: 1fr;
+    }
+    #email-marketing img {
+        margin-top: 0;
+    }
+
+}
+
+@media screen and (max-width: 980px){
+
+    main {
+        grid-template-columns: 1fr;
+    }
+    #email-marketing {
+        grid-row: 1/2;
+    }
+    #data-storage {
+        grid-column: 1/2;
+    }
+    #email-marketing img,
+    #data-storage img {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 780px){
+    header {
+        grid-template-columns: 1fr;
+    }
+    #logo {
+        grid-column: 1/2;
+    }
+}
