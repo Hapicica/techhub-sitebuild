@@ -109,6 +109,7 @@ nav {
 }
 #mobilmenu img {
     width: 1.5rem;
+    transition: var(--base-transition);
 }
 #mobilmenu:hover img,
 #mobilmenu:focus img {
